@@ -22,6 +22,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+    console.log("connected");
   } catch (error) {
     console.log("error");
   }
@@ -29,6 +30,6 @@ const connectDB = async () => {
 
 connectDB();
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 3001;
 
-app.listen(port, () => console.log("Server started!"));
+app.listen(port, () => console.log(`Server started! port is ${port}`));
